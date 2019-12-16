@@ -1,0 +1,59 @@
+* {box-sizing: 
+    border-box;
+}
+/*  main  header pw generator center*/
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 15px;
+}
+
+/* adding spacing between header and pw box */
+header {
+    margin: 20px 0 40px;
+}
+
+
+
+/* pw generator box */
+.outsideBox>.container {
+    border: 2px solid rgb(204, 204, 204, .5);
+    border-radius: 5px;
+    box
+}
+
+.insideBox {
+    border-top: 2px solid rgb(204, 204, 204, .5);
+    border-bottom: 2px solid rgb(204, 204, 204, .5);
+}
+
+.insideBox>.container {
+    margin: 5px;
+    border: 2px dashed rgb(204, 204, 204, .5);
+    border-radius: 5px;
+    height: 100px;
+}
+. {
+    width: 100%;
+    border: 2px dashed rgb(204, 204, 204, .5);
+    border-radius: 5px;
+}
+
+#generate {
+    padding: 10px 25px;
+    margin: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(75, 41, 226);
+    color: white;
+}
+#copy {
+    padding: 10px 25px;
+    margin: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(117, 171, 221);
+    color: white;
+}
