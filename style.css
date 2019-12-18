@@ -34,14 +34,16 @@ header {
     border: 2px dashed rgb(204, 204, 204, .5);
     border-radius: 5px;
     height: 100px;
+    overflow: auto;
 }
-. {
-    width: 100%;
-    border: 2px dashed rgb(204, 204, 204, .5);
-    border-radius: 5px;
+#boxRow {
+    align-items: center;
 }
-
-#generate {
+#textBox {
+    text-align: center;
+    border: none;
+}
+#generateButton {
     padding: 10px 25px;
     margin: 15px;
     border: none;
@@ -49,7 +51,7 @@ header {
     background-color: rgb(75, 41, 226);
     color: white;
 }
-#copy {
+#copyButton {
     padding: 10px 25px;
     margin: 15px;
     border: none;

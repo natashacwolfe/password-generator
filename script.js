@@ -1,18 +1,54 @@
 
+function createPw() {
+    let pwLength = prompt('How long do you want your password? Must be between 8 - 128 characters.');
 
-let sChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '[', ']', ';'];
-let nChar = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let lChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-let uChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    let characters = [
+        '!@#$%^&*()',
+        '0123456789',
+        'abcdefghijklmnopqrstuvwxyz',
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    ];
 
-let pwLength = prompt('How many characters do you want in your pasword?');
-let setSpChar = confirm('Do you want special characters in your password? Press OK for yes, press CANCEL for no');
-let setNuChar = confirm('Do you want numbers in your password? Press OK for yes, press CANCEL for no');
-let setLwChar = confirm('Do you want lowercase characters in your password? Press OK for yes, press CANCEL for no');
-let setUpChar = confirm('Do you want uppercase characters in your password? Press OK for yes, press CANCEL for no');
+    let boxes = [
+        'sChar',
+        'nChar',
+        'lChar',
+        'uChar'
+    ];
+    
+    let password = '';
 
-console.log(pwLength);
-console.log(setSpChar);
-console.log(setNuChar);
-console.log(setLwChar);
-console.log(setUpChar);
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+        if (pwLength >= 8 && pwLength <= 128) {
+            let noBoxChecked = true;
+            for (box of boxes) {
+                if (document.getElementById(box).checked){
+                noBoxChecked = false;
+            }
+        }
+        if (!noBoxChecked) {
+            for (let i = 0; i <= pwLength; i++){
+                let piece;
+                do {
+                    piece = getRandomInt(boxes.length);
+                    console.log('piece: ', piece);
+                    console.log(document.getElementById(boxes[piece]).checked);
+                } while (!document.getElementById(boxes[piece]).checked);
+            
+                password = password + characters[piece].charAt (
+                    Math.floor(Math.random() * Math.floor(characters[piece].length - 1)));
+
+            }
+        }
+    else {
+        alert('You must have at least one type of charater box selected.');
+    }   
+    } else {
+            alert('It must be between 8-128 charaters.');
+        }
+
+        document.getElementById('textBox').value = password;
+        console.log(password);
+}

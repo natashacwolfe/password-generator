@@ -28,19 +28,34 @@
             <div class="insideBox">
                 <div class="container">
                    <div class="row">
-                       <div class="col-sm-12">
-                           <p>Your secure password here</p>
-                       </div>
+                        <div class="col-sm-12">
+                            <input id="textBox" type="text" value="Your secure password"> </input>
+                        </div>
                    </div>
                 </div>
+                <div class="row" id="boxRow">
+                    <div class="col-sm-3">
+                        <input type="checkbox" id="sChar"checked>$&*
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="checkbox" id="nChar"checked>0-9
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="checkbox" id="lChar"checked>a-z
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="checkbox" id="uChar"checked>A-Z
+                    </div>
+                </div>
             </div>
+
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6 text-center">
-                            <button id="generate">Generate Password</button>
+                            <button type="button" id="generateButton" onclick="createPw()">Generate Password</button>
                         </div>
                         <div class="col-sm-6 text center">
-                            <button id="copy">Copy to Clipboard</button>
+                            <button id="copyButton" onclick="copyClip()">Copy to Clipboard</button>
                         </div>
                     </div>
                 </div>
@@ -52,6 +67,6 @@
   
 
 
-    <script src='script.js'></script>
+    <script type="text/javascript" src='script.js'></script>
 </body>
 </html>
