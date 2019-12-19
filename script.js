@@ -1,3 +1,12 @@
+
+// this assignment was full of long days researching, following tutorials, etc. 
+// I wasnt getting very far on my own... 
+// I phoned a friend who is in the industry for help...which is why this code is much 
+// cleaner than my original code. He helped me work thru it so it made sense. 
+// I had all the pieces, but he helped me put it together so it would actually work
+
+
+
 // once generate button is pressed this starts the function createPw
 function createPw() { 
     
